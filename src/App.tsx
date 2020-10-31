@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Player from './components/Player';
+import RadioView from './components/RadioView';
+import ControlsMenu from './components/ControlsMenu';
+import styled from 'styled-components';
+
+const RadioApp = styled.div`
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 100vw;
+color: #025600
+background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RadioApp>
+      <ControlsMenu />
+      <RadioView />
+      <Player />
+    </RadioApp>
   );
 }
 
